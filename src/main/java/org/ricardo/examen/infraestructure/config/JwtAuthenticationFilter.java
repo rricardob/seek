@@ -7,7 +7,6 @@ import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
 import org.ricardo.examen.infraestructure.output.persistence.repository.UserRepository;
 import org.ricardo.examen.infraestructure.util.JwtHelper;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -20,9 +19,8 @@ import java.io.IOException;
 @Component
 @RequiredArgsConstructor
 public class JwtAuthenticationFilter extends OncePerRequestFilter {
-    //@Autowired
+
     private final JwtHelper jwtService;
-    //@Autowired
     private final UserRepository userRepository;
 
     @Override

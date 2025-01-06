@@ -46,14 +46,5 @@ public class ClientExceptionHandler {
         return new ResponseEntity<>(resObj, HttpStatus.BAD_REQUEST);
     }
 
-    /*@ExceptionHandler(CustomerDuplicationViolationException.class)
-    public final ResponseEntity<Object> handleUserNotFoundException(CustomerDuplicationViolationException ex, WebRequest request) {
-        ExceptionResponse exceptionResponse = ExceptionResponse.builder()
-                .message(ex.getMessage())
-                .build();
-        log.error(ex.getMessage(), ex);
-        return new ResponseEntity<>(exceptionResponse, HttpStatus.CONFLICT);
-    }*/
-
 }
 

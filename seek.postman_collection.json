@@ -1,0 +1,116 @@
+{
+	"info": {
+		"_postman_id": "67ca9431-aa3c-43b9-9bea-5ecb22a26b14",
+		"name": "seek",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "1487986",
+		"_collection_link": "https://bold-flare-367723.postman.co/workspace/Personal~31e32ac7-31a7-4387-8cf2-b2879e7d98d8/collection/1487986-67ca9431-aa3c-43b9-9bea-5ecb22a26b14?action=share&source=collection_link&creator=1487986"
+	},
+	"item": [
+		{
+			"name": "add client",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"ricardot\",\n  \"first_name\": \"bueno\",\n  \"last_name\": \"balbis\",\n  \"birth_date\": \"1992-07-23\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://18.191.25.89/api/v1/client"
+			},
+			"response": []
+		},
+		{
+			"name": "add clients",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQURNSU5JU1RSQVRPUiIsIm5hbWUiOiJyaWNhcmRvIGJ1ZW5vIiwicGVybWlzc2lvbiI6W3siYXV0aG9yaXR5IjoiV1JJVEUifSx7ImF1dGhvcml0eSI6IlJFQUQifSx7ImF1dGhvcml0eSI6IlJPTEVfQURNSU5JU1RSQVRPUiJ9XSwic3ViIjoicmJ1ZW5vIiwiaWF0IjoxNzM1ODg5MjI5LCJleHAiOjE3MzU5NzU2Mjl9.7flGvVxhY39INRaUHy0Be6YU8D7cq9sAM133GpYv1QI"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"clients\": [\n        {\n            \"name\": \"cliente1\",\n            \"first_name\": \"bueno\",\n            \"last_name\": \"balbis\",\n            \"birth_date\": \"2000-01-20\"\n        },\n        {\n            \"name\": \"cliente2\",\n            \"first_name\": \"bueno\",\n            \"last_name\": \"balbis\",\n            \"birth_date\": \"1889-10-03\"\n        },\n        {\n            \"name\": \"cliente3\",\n            \"first_name\": \"bueno\",\n            \"last_name\": \"balbis\",\n            \"birth_date\": \"1992-04-22\"\n        },\n        {\n            \"name\": \"cliente4\",\n            \"first_name\": \"bueno\",\n            \"last_name\": \"balbis\",\n            \"birth_date\": \"1995-02-22\"\n        },\n        {\n            \"name\": \"cliente5\",\n            \"first_name\": \"bueno\",\n            \"last_name\": \"balbis\",\n            \"birth_date\": \"1991-05-20\"\n        },\n        {\n            \"name\": \"cliente6\",\n            \"first_name\": \"bueno\",\n            \"last_name\": \"balbis\",\n            \"birth_date\": \"2000-01-10\"\n        },\n        {\n            \"name\": \"cliente7\",\n            \"first_name\": \"bueno\",\n            \"last_name\": \"balbis\",\n            \"birth_date\": \"2000-01-23\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://18.191.25.89/api/v1/client/batch"
+			},
+			"response": []
+		},
+		{
+			"name": "metrics",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQURNSU5JU1RSQVRPUiIsIm5hbWUiOiJyaWNhcmRvIGJ1ZW5vIiwicGVybWlzc2lvbiI6W3siYXV0aG9yaXR5IjoiV1JJVEUifSx7ImF1dGhvcml0eSI6IlJFQUQifSx7ImF1dGhvcml0eSI6IlJPTEVfQURNSU5JU1RSQVRPUiJ9XSwic3ViIjoicmJ1ZW5vIiwiaWF0IjoxNzM1ODg5MjI5LCJleHAiOjE3MzU5NzU2Mjl9.7flGvVxhY39INRaUHy0Be6YU8D7cq9sAM133GpYv1QI"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://18.191.25.89/api/v1/client/metrics"
+			},
+			"response": []
+		},
+		{
+			"name": "client info",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQURNSU5JU1RSQVRPUiIsIm5hbWUiOiJyaWNhcmRvIGJ1ZW5vIiwicGVybWlzc2lvbiI6W3siYXV0aG9yaXR5IjoiV1JJVEUifSx7ImF1dGhvcml0eSI6IlJFQUQifSx7ImF1dGhvcml0eSI6IlJPTEVfQURNSU5JU1RSQVRPUiJ9XSwic3ViIjoicmJ1ZW5vIiwiaWF0IjoxNzM1ODg5MjI5LCJleHAiOjE3MzU5NzU2Mjl9.7flGvVxhY39INRaUHy0Be6YU8D7cq9sAM133GpYv1QI"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://18.191.25.89/api/v1/client/info"
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"rbueno\",\n    \"password\":\"clave456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://18.191.25.89/auth/authenticate"
+			},
+			"response": []
+		},
+		{
+			"name": "actuator",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQURNSU5JU1RSQVRPUiIsIm5hbWUiOiJyaWNhcmRvIGJ1ZW5vIiwicGVybWlzc2lvbiI6W3siYXV0aG9yaXR5IjoiV1JJVEUifSx7ImF1dGhvcml0eSI6IlJFQUQifSx7ImF1dGhvcml0eSI6IlJPTEVfQURNSU5JU1RSQVRPUiJ9XSwic3ViIjoicmJ1ZW5vIiwiaWF0IjoxNzM2MTMwODE0LCJleHAiOjE3MzYyMTcyMTR9.Tk9-vw-ztooCpx59gwzEULvtDKi2XSnETmN5NYzJNMo"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://18.191.25.89/actuator"
+			},
+			"response": []
+		}
+	]
+}
