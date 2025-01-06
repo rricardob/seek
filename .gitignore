@@ -39,3 +39,4 @@ out/
 ### logs
 *.log
 logs/**
+logs/application.log
