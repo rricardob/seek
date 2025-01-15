@@ -94,7 +94,7 @@ class ClientRestAdapterTest {
         when(createClientUseCase.create(clientToSave)).thenReturn(savedClient);
         when(mapper.toCreateClientResponse(savedClient)).thenReturn(response);
 
-        mockMvc.perform(post("/api/v1/client/create")
+        mockMvc.perform(post("/api/v1/client/")
                         .header("Authorization", "Bearer " + jwtToken)
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(objectMapper.writeValueAsString(requestDto)))

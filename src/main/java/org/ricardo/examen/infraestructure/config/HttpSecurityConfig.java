@@ -41,7 +41,7 @@ public class HttpSecurityConfig {
             authConfig.requestMatchers(HttpMethod.POST, "/auth/authenticate").permitAll();
             authConfig.requestMatchers("/swagger-ui/**", "/v3/api-docs/**").permitAll();
             authConfig.requestMatchers("/error").permitAll();
-            authConfig.requestMatchers(HttpMethod.POST, "/api/v1/client/create").hasAuthority(Permission.WRITE.name());
+            authConfig.requestMatchers(HttpMethod.POST, "/api/v1/client/").hasAuthority(Permission.WRITE.name());
             authConfig.requestMatchers(HttpMethod.POST, "/api/v1/client/batch").hasAuthority(Permission.WRITE.name());
             authConfig.requestMatchers(HttpMethod.GET, "/api/v1/client/metrics").hasAuthority(Permission.READ.name());
             authConfig.requestMatchers(HttpMethod.GET, "/api/v1/client/info").hasAuthority(Permission.READ.name());

@@ -32,7 +32,7 @@ public class ClientRestAdapter {
     private final ClientRestMapper mapper;
 
     @PreAuthorize("hasAuthority('WRITE')")
-    @PostMapping("/create")
+    @PostMapping("/")
     public ResponseEntity<CreateClientResponse> createClient(@Valid @RequestBody ClientRequestDto request) {
         Client clientToSave = this.mapper.toModel(request);
         Client clientSave = this.createClientUseCase.create(clientToSave);
