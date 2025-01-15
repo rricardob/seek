@@ -18,6 +18,9 @@ spring:
 logging:
   level:
     root: INFO
+    org:
+      springframework:
+        security: DEBUG
   file:
     name: logs/application.log
   pattern:
